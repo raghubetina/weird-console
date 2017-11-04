@@ -1,24 +1,12 @@
-# README
+# Weird Console
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Reproduction](reloading.gif?raw=true "Reproduction")
 
-Things you may want to cover:
+A demonstration of [the issue discussed here](https://github.com/rails/web-console/issues/245).
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ 1. `bundle`
+ 1. `rails s`
+ 1. Navigate to the homepage and note the server log output.
+ 1. Change the integer in `pages#home`.
+ 1. Refresh and note that the server log output reflected the change - maybe?
+ 1. Keep changing the integer and refreshing — eventually the output will stop changing (although the `object_id` of the controller instance _does_ continue to change).
